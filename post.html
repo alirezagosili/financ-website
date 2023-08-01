@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/utilities.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Post One</title>
+</head>
+<body id="home">
+  <header class="hero blog">
+    <div id="navbar" class="navbar top">
+      <h1 class="logo">
+        <span class="text-primary"><i class="fas fa-book-open"></i> Edge</span>ledger
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./index.html#about">About</a></li>
+          <li><a href="./index.html#cases">Cases</a></li>
+          <li><a href="./index.html#blog">Blog</a></li>
+          <li><a href="./index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="content">
+      <h2>Blog</h2>
+    </div>
+  </header>
+
+  <main>
+    <section class="post">
+      <h2>Blog Post One</h2>
+      <p class="meta">
+        <i class="fas fa-user"></i> Posted by <strong>Alice Lee</strong> | June 27, 2023
+      </p>
+      <img src="image_resources/blog/blog1.jpg" alt="">
+      <p>Building a solid financial foundation for our clients, guiding you towards long-term prosperity and stability.</p>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, ex, eos quia libero provident expedita voluptatem suscipit nihil molestiae magni cum facilis quae eligendi cumque iure iste quod corrupti. Neque tempora laudantium quis blanditiis eligendi placeat maxime quo doloribus exercitationem, repudiandae accusamus a cupiditate accusantium expedita incidunt doloremque id? Hic qui eaque earum nisi corrupti corporis culpa quae, ducimus quidem.</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ex porro consequuntur laborum ab sint illum architecto vitae recusandae quidem quaerat cum similique obcaecati nobis libero minus blanditiis laboriosam iure suscipit nam, nemo tempora inventore ullam ducimus? Ipsa, sint debitis inventore obcaecati error laborum cum? Enim odit nihil animi nisi?</p>
+    </section>
+  </main>
+
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2023 - EdgeLedger</p>
+  </footer>
+  <script>
+    const navbar = document.getElementById('navbar');
+    let scrolled = false;
+
+    window.onscroll = function() {
+      if(window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if(!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = true;
+        }, 200)
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+    }
+  </script>
+</body>
+</html>
